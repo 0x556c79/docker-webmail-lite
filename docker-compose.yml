@@ -7,7 +7,7 @@ services:
       - db
     build: .
     ports:
-      - "443:8080"
+      - "8080:8080"
     volumes:
       - web-data:/var/www/html/data
   db:
