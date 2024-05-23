@@ -7,7 +7,9 @@ services:
       - db
     build: .
     ports:
-      - "80:80"
+      - "443:8080"
+    volumes:
+      - web-data:/var/www/html/data
   db:
     image: mysql:8
     command: --default-authentication-plugin=mysql_native_password
@@ -20,3 +22,6 @@ services:
       MYSQL_PASSWORD: docker_Bundle
     cap_add:
       - SYS_NICE # CAP_SYS_NICE
+
+volumes:
+  web-data:
