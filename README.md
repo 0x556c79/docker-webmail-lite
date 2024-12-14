@@ -27,11 +27,11 @@ Whether you get the image from DockerHub directly, or build it from GitHub repos
 
 In case of GitHub repository, the latest version of WebMail Lite is downloaded from the website. DockerHub image is not guaranteed to contain the latest version of the product.
 
-The installation will be available at http://localhost/ - if you wish to use another port instead of default 80, adjust `docker-compose.yml` file and edit the following section:
+The installation will be available at http://localhost:8080 - if you wish to use another port instead of default 80, adjust `docker-compose.yml` file and edit the following section:
 
 ```
     ports:
-      - "80:80"
+      - "8080:8080"
 ```
 
 Supplying "800:80" will make sure port 800 is used, and the installation will be available at http://localhost:800
